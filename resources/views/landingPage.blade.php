@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>VeraCT System</title>
 </head>
 
@@ -35,6 +37,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" href="#home">Home</a>
                         <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#industries">Industries</a>
                         <a class="nav-link" href="#process">Process</a>
                         <a class="nav-link" href="#contacts">Contacts</a>
                     </div>
@@ -45,16 +48,13 @@
         <!--Hero Starts-->
         <section class="section-div home-container" id="home">
             <div class="hero-container">
-                <div>
-                    <div class="wow fadeInUp">
-                        <h1>Power Your Business with VeraCT</h1>
-                        <h2>The All-in-One IT Solution</h2>
-
-                        <p>
-                            " Streamline Operations with VeraCT – Accounting, HR, and More in One Platform!" </p>
-                    </div>
+                <div class="hero-left wow fadeInUp">
+                    <h1>Power Your Business with VeraCT</h1>
+                    <h2>The All-in-One IT Solution</h2>
+                    <p>
+                        " Streamline Operations with VeraCT – Accounting, HR, and More in One Platform!" </p>
                 </div>
-                <div>
+                <div class="hero-right">
                     <img src="{{ asset('images/heroImage.png') }}" alt="" />
                 </div>
             </div>
@@ -68,11 +68,11 @@
                     Enhancing Efficiency, One System at a Time
                 </h1>
                 <div class="features-wrapper">
-                    <div class="features-style" data-link="{{ route('accounting') }}">
-                        <div class="image-wrapper-style wow fadeInUp">
+                    <div class="features-style wow fadeInUp" data-link="{{ route('accounting') }}">
+                        <div class="image-wrapper-style ">
                             <img src="{{ asset('images/Accountant-bro.png') }}" alt="" />
                         </div>
-                        <div class="wow fadeInUp">
+                        <div>
                             <h4>Accounting Management</h4>
                             <p>
                                 Keep your business finances in check with VeraCT’s automated
@@ -82,25 +82,24 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style " data-link="#hr">
-                        <div class="image-wrapper-style wow fadeInUp">
-                            <img src="{{ asset('images/hr.png') }}" alt="" />
+                    <div class="features-style wow fadeInUp" data-link="#hr">
+                        <div class="image-wrapper-style ">
+                            <img src="{{ asset('images/resume-folder-bro.png') }}" alt="" />
                         </div>
-                        <div class="wow fadeInUp">
+                        <div>
                             <h4>Human Resources</h4>
                             <p>
-                                Automate your payroll processing, attendance tracking, and
-                                employee records with ease. VeraCT ensures accurate salary
-                                computation, tax deductions, and benefits management while
-                                staying compliant with labor laws.
+                                Manage your employees effortlessly with VeraCT's HR system. Handle payroll, track
+                                attendance, and streamline employee records — ensuring smooth and efficient workforce
+                                management.
                             </p>
                         </div>
                     </div>
-                    <div class="features-style" data-link="#inventory">
-                        <div class="image-wrapper-style wow fadeInUp">
-                            <img src="{{ asset('images/inventory.png') }}" alt="" />
+                    <div class="features-style wow fadeInUp" data-link="#inventory">
+                        <div class="image-wrapper-style ">
+                            <img src="{{ asset('images/checking-boxes-rafiki.png') }}" alt="" />
                         </div>
-                        <div class="wow fadeInUp">
+                        <div>
                             <h4>Inventory Management</h4>
                             <p>
                                 Optimize your supply chain with VeraCT’s inventory tracking
@@ -110,11 +109,11 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style " data-link="#cservice">
-                        <div class="image-wrapper-style wow fadeInUp">
-                            <img src="{{ asset('images/cservice.png') }}" alt="" />
+                    <div class="features-style wow fadeInUp " data-link="#cservice">
+                        <div class="image-wrapper-style ">
+                            <img src="{{ asset('images/customer-relationship management-bro.png') }}" alt="" />
                         </div>
-                        <div class="wow fadeInUp">
+                        <div>
                             <h4>Customer Management</h4>
                             <p>
                                 Enhance your sales and customer engagement with VeraCT’s CRM
@@ -123,45 +122,43 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style " data-link="#pos">
-                        <div class="image-wrapper-style wow fadeInUp">
-                            <img src="{{ asset('images/pos.png') }}" alt="" />
+                    <div class="features-style wow fadeInUp " data-link="#pos">
+                        <div class="image-wrapper-style ">
+                            <img src="{{ asset('images/Task-bro.png') }}" alt="" />
                         </div>
-                        <div class="wow fadeInUp">
+                        <div>
                             <h4>Task Management</h4>
                             <p>
-                                Boost sales efficiency with an integrated POS system designed
-                                for retail businesses. Process secure transactions, track sales
-                                performance, manage customer purchases, and sync inventory
-                                across multiple locations.
+                                Stay organized and boost productivity by assigning, tracking, and managing tasks within
+                                your team. VeraCT helps ensure every task is completed on time and aligned with your
+                                business goals.
                             </p>
                         </div>
                     </div>
-                    <div class="features-style " data-link="#erp">
-                        <div class="image-wrapper-style wow fadeInUp">
-                            <img src="{{ asset('images/erp.png') }}" alt="" />
+                    <div class="features-style wow fadeInUp " data-link="#erp">
+                        <div class="image-wrapper-style ">
+                            <img src="{{ asset('images/business-plan-bro.png') }}" alt="" />
                         </div>
-                        <div class="wow fadeInUp">
+                        <div>
                             <h4>Project Management</h4>
                             <p>
-                                Get a fully customizable ERP solution that fits your unique
-                                business needs. From workflow automation to advanced reporting,
-                                VeraCT helps businesses of all sizes optimize operations and
-                                scale efficiently.
+                                Plan, collaborate, and monitor project progress with ease. VeraCT’s project management
+                                system allows you to set milestones, assign tasks, and ensure seamless project delivery
+                                on time.
                             </p>
                         </div>
                     </div>
-                    <div class="features-style " data-link="#erp">
-                        <div class="image-wrapper-style wow fadeInUp">
-                            <img src="{{ asset('images/erp.png') }}" alt="" />
+                    <div class="features-style wow fadeInUp " data-link="#erp">
+                        <div class="image-wrapper-style ">
+                            <img src="{{ asset('images/Profiling-bro.png') }}" alt="" />
                         </div>
-                        <div class="wow fadeInUp">
+                        <div>
                             <h4>Payroll Management</h4>
                             <p>
-                                Get a fully customizable ERP solution that fits your unique
-                                business needs. From workflow automation to advanced reporting,
-                                VeraCT helps businesses of all sizes optimize operations and
-                                scale efficiently.
+                                Automate your payroll processing, attendance tracking, and
+                                employee records with ease. VeraCT ensures accurate salary
+                                computation, tax deductions, and benefits management while
+                                staying compliant with labor laws.
                             </p>
                         </div>
                     </div>
@@ -170,17 +167,116 @@
         </div>
 
         <!--VeraCT Features ends-->
-
+        <!--Industries Starts-->
+        <div class="section-div industries" id="industries">
+            <div class="industries-container">
+                <h1 class="wow fadeInRight">
+                    Tailored Solutions for Every Business
+                </h1>
+                <div class="industries-wrapper">
+                    <div class="industries-style wow fadeInUp">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/retail.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Retail Industry</h4>
+                            <p>
+                                Track sales, inventory, and orders with ease.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="industries-style wow fadeInUp">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/manufacture.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Manufacturing Industry</h4>
+                            <p>
+                                Manage production, supply chain, and materials efficiently.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="industries-style wow fadeInUp">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/healthcare.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Healthcare Industry</h4>
+                            <p>
+                                Simplify patient records, billing, and inventory management.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="industries-style wow fadeInUp ">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/delivery-truck.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Logistics Industry</h4>
+                            <p>
+                                Track shipments, delivery, and warehouse inventory.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="industries-style wow fadeInUp ">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/deposit.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Financial Services</h4>
+                            <p>
+                                Monitor transactions, reports, and account records easily.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="industries-style wow fadeInUp ">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/hotel-cleaning.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Hospitality Industry</h4>
+                            <p>
+                                Handle bookings, room availability, and customer management.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="industries-style wow fadeInUp ">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/construction.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Construction Industry</h4>
+                            <p>
+                                Manage projects, resources, and workforce efficiently.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="industries-style wow fadeInUp ">
+                        <div class="industries-image-wrapper-style ">
+                            <img src="{{ asset('images/office-building.png') }}" alt="" />
+                        </div>
+                        <div>
+                            <h4>Small and Medium Enterprises</h4>
+                            <p>
+                                Track business performance, expenses, and growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Industries Ends-->
         <!--VeraCT Process-->
         <div class="section-div process" id="process">
             <h1 class="wow fadeInRight">Easy Steps to Success</h1>
             <div class="process-container">
                 <div class="process-image-wrapper">
-                    <img id="default-image" class="active" src="{{ asset('images/easystep.png') }}"
+                    <img id="default-image" class="active" src="{{ asset('images/c0ompleted-steps-bro.png') }}"
                         alt="Default Image" />
-                    <img id="step1-image" src="{{ asset('images/step1.png') }}" alt="Step 1 Image" />
-                    <img id="step2-image" src="{{ asset('images/step2.png') }}" alt="Step 2 Image" />
-                    <img id="step3-image" src="{{ asset('images/step3.png') }}" alt="Step 3 Image" />
+                    <img id="step1-image" src="{{ asset('images/business-deal-bro.png') }}" alt="Step 1 Image" />
+                    <img id="step2-image" src="{{ asset('images/advanced-customization-bro.png') }}"
+                        alt="Step 2 Image" />
+                    <img id="step3-image" src="{{ asset('images/Analyze-bro.png') }}" alt="Step 3 Image" />
                 </div>
                 <div class="process-style">
                     <div class="process-style-box box-one" data-target="step1-image">
@@ -218,29 +314,46 @@
 
         <!--VeraCT Contacts-->
         <div class="section-div contacts" id="contacts">
-            <h1 class="wow fadeInRight">Ready to optimize your business?</h1>
-            <div class="contacts-wrapper">
-                <a href="#email" class="text-decoration-none">
-                    <div class="wow zoom-in">
-                        <div class="contacts-container">
-                            <h4>Email</h4>
-                            <p>vpd@vpdbusinesssolution.com</p>
+            <div class="contacts-container">
+                <h1 class="wow fadeInRight">
+                    Ready to optimize your business?
+                </h1>
+                <div class="contacts-wrapper">
+                    <div class="contacts-style">
+                        <h4>Our office</h4>
+                        <p><img src="{{ asset('images/icons8-phone-50.png') }}" alt=""> (02)-8721-8960</p>
+                        <p><img src="{{ asset('images/icons8-mobile-phone-48.png') }}" alt="">
+                            +63917-1230-684
+                        </p>
+                        <p>Unit B1, Block 2, Citiplaza 1 Commercial Complex, Tandang Sora
+                            Avenue Corner Visayas Avenue Extension, Barangay Pasong Tamo, Quezon
+                            City</p>
+                    </div>
+                    <div class="contacts-style">
+                        <h4>Say Hello</h4>
+                        <div class="contact-form">
+                            <form action="#" method="post">
+                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Telephone" required>
+                                <input type="email" placeholder="Email" required>
+                                <textarea placeholder="Comment" rows="4" required></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
                         </div>
                     </div>
-                </a>
-                <a href="#phone" class="text-decoration-none">
-                    <div class="wow zoom-in">
-                        <div class="contacts-container" id="phone">
-                            <h4>Phone</h4>
-                            <p>(02)-8721-8960</p>
-                            <p>+63917-1230-684</p>
-                        </div>
+                    <div class="contacts-style">
+                        <h4>Keep Connected</h4>
+                        <a href="#" class="no-style">
+                            <img src="{{ asset('images/icons8-facebook-50.png') }}" alt="">
+                            <p>Facebook</p>
+                        </a>
+                        <a href="#" class="no-style">
+                            <img src="{{ asset('images/icons8-website-50.png') }}" alt="">
+                            <p>Web Page</p>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="wow fadeInUp contacts-image-wrapper">
-                <a href="#facebook"><i class="bx bxl-facebook-circle contacts-img"></i></a>
-                <a href="#website"><i class="bx bx-world contacts-img"></i></a>
+                </div>
+
             </div>
         </div>
 
@@ -249,11 +362,6 @@
         <!--Footer-->
         <footer>
             <div class="footer-wrapper">
-                <p>
-                    Unit B1, Block 2, Citiplaza 1 Commercial Complex, Tandang Sora
-                    Avenue Corner Visayas Avenue Extension, Barangay Pasong Tamo, Quezon
-                    City
-                </p>
                 <p>Copyright © VPD BUSINESS SOLUTIONS INC. 2022 - 2025</p>
             </div>
         </footer>
