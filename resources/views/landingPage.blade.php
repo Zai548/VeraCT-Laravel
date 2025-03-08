@@ -43,118 +43,130 @@
         </nav>
 
         <!--Hero Starts-->
-        <section class="section-div home-container" id="home"
-            style="background-image: url('{{ asset('images/background.png') }}')">
+        <section class="section-div home-container" id="home">
             <div class="hero-container">
                 <div>
-                    <div class="">
-                        <h1 class="wow fadeInUp">Power Your Business with VeraCT</h1>
-                        <h2 class="wow fadeInUp">The All-in-One IT Solution</h2>
+                    <div class="wow fadeInUp">
+                        <h1>Power Your Business with VeraCT</h1>
+                        <h2>The All-in-One IT Solution</h2>
 
-                        <p class="wow fadeInUp">
-                            "Streamline Operations with VeraCT – Accounting, HR, and More in
-                            One Platform!"
-                        </p>
+                        <p>
+                            " Streamline Operations with VeraCT – Accounting, HR, and More in One Platform!" </p>
                     </div>
                 </div>
                 <div>
-                    <img src="{{ asset('images/heroIMG.png') }}" alt="" />
+                    <img src="{{ asset('images/heroImage.png') }}" alt="" />
                 </div>
             </div>
         </section>
         <!-- Navbar & Hero ends -->
 
         <!--VeraCT Features-->
-        <div class="section-div features-container" id="features">
-            <h1 class="wow fadeInRight">
-                Enhancing Efficiency, One System at a Time
-            </h1>
-            <div class="features-wrapper">
-                <div class="features-style" data-link="{{ route('accounting') }}">
-                    <div class="image-wrapper-style wow fadeInUp">
-                        <img src="{{ asset('images/accounting.png') }}" alt="" />
+        <div class="section-div features" id="features">
+            <div class="features-container">
+                <h1 class="wow fadeInRight">
+                    Enhancing Efficiency, One System at a Time
+                </h1>
+                <div class="features-wrapper">
+                    <div class="features-style" data-link="{{ route('accounting') }}">
+                        <div class="image-wrapper-style wow fadeInUp">
+                            <img src="{{ asset('images/Accountant-bro.png') }}" alt="" />
+                        </div>
+                        <div class="wow fadeInUp">
+                            <h4>Accounting Management</h4>
+                            <p>
+                                Keep your business finances in check with VeraCT’s automated
+                                accounting system. Generate real-time reports, manage invoices,
+                                track expenses, and ensure compliance with financial
+                                regulations—all in one place.
+                            </p>
+                        </div>
                     </div>
-                    <div class="wow fadeInUp">
-                        <h4>Accounting and Finance</h4>
-                        <p>
-                            Keep your business finances in check with VeraCT’s automated
-                            accounting system. Generate real-time reports, manage invoices,
-                            track expenses, and ensure compliance with financial
-                            regulations—all in one place.
-                        </p>
+                    <div class="features-style " data-link="#hr">
+                        <div class="image-wrapper-style wow fadeInUp">
+                            <img src="{{ asset('images/hr.png') }}" alt="" />
+                        </div>
+                        <div class="wow fadeInUp">
+                            <h4>Human Resources</h4>
+                            <p>
+                                Automate your payroll processing, attendance tracking, and
+                                employee records with ease. VeraCT ensures accurate salary
+                                computation, tax deductions, and benefits management while
+                                staying compliant with labor laws.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="features-style center-image right-image" data-link="#hr">
-                    <div class="image-wrapper-style wow fadeInUp">
-                        <img src="{{ asset('images/hr.png') }}" alt="" />
+                    <div class="features-style" data-link="#inventory">
+                        <div class="image-wrapper-style wow fadeInUp">
+                            <img src="{{ asset('images/inventory.png') }}" alt="" />
+                        </div>
+                        <div class="wow fadeInUp">
+                            <h4>Inventory Management</h4>
+                            <p>
+                                Optimize your supply chain with VeraCT’s inventory tracking
+                                system. Monitor stock levels, automate restocking alerts, and
+                                streamline order fulfillment to avoid shortages and reduce
+                                operational costs.
+                            </p>
+                        </div>
                     </div>
-                    <div class="wow fadeInUp">
-                        <h4>HR And Payroll</h4>
-                        <p>
-                            Automate your payroll processing, attendance tracking, and
-                            employee records with ease. VeraCT ensures accurate salary
-                            computation, tax deductions, and benefits management while
-                            staying compliant with labor laws.
-                        </p>
+                    <div class="features-style " data-link="#cservice">
+                        <div class="image-wrapper-style wow fadeInUp">
+                            <img src="{{ asset('images/cservice.png') }}" alt="" />
+                        </div>
+                        <div class="wow fadeInUp">
+                            <h4>Customer Management</h4>
+                            <p>
+                                Enhance your sales and customer engagement with VeraCT’s CRM
+                                tools. Track leads, follow up with clients, manage interactions,
+                                and analyze sales data to maximize revenue growth.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="features-style" data-link="#inventory">
-                    <div class="image-wrapper-style wow fadeInUp">
-                        <img src="{{ asset('images/inventory.png') }}" alt="" />
+                    <div class="features-style " data-link="#pos">
+                        <div class="image-wrapper-style wow fadeInUp">
+                            <img src="{{ asset('images/pos.png') }}" alt="" />
+                        </div>
+                        <div class="wow fadeInUp">
+                            <h4>Task Management</h4>
+                            <p>
+                                Boost sales efficiency with an integrated POS system designed
+                                for retail businesses. Process secure transactions, track sales
+                                performance, manage customer purchases, and sync inventory
+                                across multiple locations.
+                            </p>
+                        </div>
                     </div>
-                    <div class="wow fadeInUp">
-                        <h4>Inventory and Logistics</h4>
-                        <p>
-                            Optimize your supply chain with VeraCT’s inventory tracking
-                            system. Monitor stock levels, automate restocking alerts, and
-                            streamline order fulfillment to avoid shortages and reduce
-                            operational costs.
-                        </p>
+                    <div class="features-style " data-link="#erp">
+                        <div class="image-wrapper-style wow fadeInUp">
+                            <img src="{{ asset('images/erp.png') }}" alt="" />
+                        </div>
+                        <div class="wow fadeInUp">
+                            <h4>Project Management</h4>
+                            <p>
+                                Get a fully customizable ERP solution that fits your unique
+                                business needs. From workflow automation to advanced reporting,
+                                VeraCT helps businesses of all sizes optimize operations and
+                                scale efficiently.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="features-style right-image" data-link="#cservice">
-                    <div class="image-wrapper-style wow fadeInUp">
-                        <img src="{{ asset('images/cservice.png') }}" alt="" />
-                    </div>
-                    <div class="wow fadeInUp">
-                        <h4>Sales and Customer Service</h4>
-                        <p>
-                            Enhance your sales and customer engagement with VeraCT’s CRM
-                            tools. Track leads, follow up with clients, manage interactions,
-                            and analyze sales data to maximize revenue growth.
-                        </p>
-                    </div>
-                </div>
-                <div class="features-style center-image" data-link="#pos">
-                    <div class="image-wrapper-style wow fadeInUp">
-                        <img src="{{ asset('images/pos.png') }}" alt="" />
-                    </div>
-                    <div class="wow fadeInUp">
-                        <h4>Retail and POS System</h4>
-                        <p>
-                            Boost sales efficiency with an integrated POS system designed
-                            for retail businesses. Process secure transactions, track sales
-                            performance, manage customer purchases, and sync inventory
-                            across multiple locations.
-                        </p>
-                    </div>
-                </div>
-                <div class="features-style right-image" data-link="#erp">
-                    <div class="image-wrapper-style wow fadeInUp">
-                        <img src="{{ asset('images/erp.png') }}" alt="" />
-                    </div>
-                    <div class="wow fadeInUp">
-                        <h4>Customer ERP Solutions</h4>
-                        <p>
-                            Get a fully customizable ERP solution that fits your unique
-                            business needs. From workflow automation to advanced reporting,
-                            VeraCT helps businesses of all sizes optimize operations and
-                            scale efficiently.
-                        </p>
+                    <div class="features-style " data-link="#erp">
+                        <div class="image-wrapper-style wow fadeInUp">
+                            <img src="{{ asset('images/erp.png') }}" alt="" />
+                        </div>
+                        <div class="wow fadeInUp">
+                            <h4>Payroll Management</h4>
+                            <p>
+                                Get a fully customizable ERP solution that fits your unique
+                                business needs. From workflow automation to advanced reporting,
+                                VeraCT helps businesses of all sizes optimize operations and
+                                scale efficiently.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="features-wrapper"></div>
         </div>
 
         <!--VeraCT Features ends-->

@@ -1,0 +1,71 @@
+body {
+    position: relative;
+    background-color: white;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #497d74;
+    z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar {
+    transition: all 0.3s ease-in-out; /* Smooth shrinking effect */
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar.scrolled {
+    background-color: #27445d;
+    box-shadow: 0 2px 8px #05203f;
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #00d4ff;
+}
+
+.navbar-nav .nav-link.active {
+    color: #00d4ff !important; /* Change to your preferred active color */
+    font-weight: bold; /* Makes it stand out */
+    border-bottom: 2px solid #00d4ff; /* Optional underline effect */
+}
+
+.nav-link:focus {
+    color: #00d4ff;
+    outline: none;
+}
+
+.navbar-toggler .active {
+    border: 2px solid #00d4ff;
+}
+
+.navbar-toggler .focus {
+    border: 2px solid #00d4ff;
+}
