@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const sections = document.querySelectorAll(".section-div");
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    const navLinks = document.querySelectorAll(".side-nav .side-nav-link");
 
     function changeActiveLink() {
         let scrollY = window.scrollY;
@@ -47,49 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("mouseleave", function () {
             item.classList.remove("show");
             item.querySelector(".dropdown-menu").classList.remove("show");
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const defaultImage = document.getElementById("default-image");
-    const images = document.querySelectorAll(".process-image-wrapper img");
-    const steps = document.querySelectorAll(".process-style-box ");
-
-    steps.forEach((step) => {
-        step.addEventListener("mouseenter", function () {
-            let targetId = step.getAttribute("data-target");
-
-            images.forEach((img) => img.classList.remove("active")); // Hide all images
-            document.getElementById(targetId).classList.add("active"); // Show target image
-        });
-
-        step.addEventListener("mouseleave", function () {
-            images.forEach((img) => img.classList.remove("active")); // Hide all images
-            defaultImage.classList.add("active"); // Show default image again
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".features-style").forEach(function (box) {
-        box.addEventListener("click", function () {
-            const link = this.getAttribute("data-link");
-            if (link) {
-                window.location.href = link; // Redirect to the link
-            }
-        });
-    });
-});
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-        window.scrollTo({
-            top: target.offsetTop - 80, // This is the offset (100px from top)
-            behavior: "smooth",
         });
     });
 });

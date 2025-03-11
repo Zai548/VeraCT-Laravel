@@ -24,7 +24,7 @@
     RewriteRule ^ index.php [L]
 
     RewriteEngine On
-    RewriteBase /dashboard/veract/public/
+    RewriteBase /dashboard/VeraCT/public/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ index.php [L]

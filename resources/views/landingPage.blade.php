@@ -15,7 +15,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -36,7 +35,21 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link active" href="#home">Home</a>
-                        <a class="nav-link" href="#features">Features</a>
+
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#features"
+                                onclick="toggleDropdown(event)">Features</a>
+                            <div class="dropdown-content">
+                                <a href="{{ route('accounting') }}">Accounting Management</a>
+                                <a href="#hr">Human Resources</a>
+                                <a href="#inventory">Inventory Management</a>
+                                <a href="#cservice">Customer Management</a>
+                                <a href="#pos">Task Management</a>
+                                <a href="#erp">Project Management</a>
+                                <a href="#payroll">Payroll Management</a>
+                            </div>
+                        </div>
+
                         <a class="nav-link" href="#industries">Industries</a>
                         <a class="nav-link" href="#process">Process</a>
                         <a class="nav-link" href="#contacts">Contacts</a>
@@ -268,7 +281,7 @@
         <!--Industries Ends-->
         <!--VeraCT Process-->
         <div class="section-div process" id="process">
-            <h1 class="wow fadeInRight">Easy Steps to Success</h1>
+            <h1 class=" wow fadeInRight">Easy Steps to Success</h1>
             <div class="process-container">
                 <div class="process-image-wrapper">
                     <img id="default-image" class="active" src="{{ asset('images/c0ompleted-steps-bro.png') }}"

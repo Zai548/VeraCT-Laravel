@@ -28,44 +28,62 @@ body::before {
 }
 
 /* Navbar Starts */
-
 .navbar {
-    transition: all 0.3s ease-in-out; /* Smooth shrinking effect */
+    transition: all 0.3s ease-in-out;
     border-bottom: 2px solid #2c3e50;
 }
 
 /* Navbar toggler */
 .navbar-toggler {
     background-color: var(--soft-white);
+    cursor: pointer;
 }
 
+/* Shrink effect when scrolled */
 .navbar.scrolled {
     background-color: #6a9f6a;
     box-shadow: 0 2px 8px #2c3e50;
 
-    .nav-link {
-        color: var(--hover-text-color) !important;
-        font-weight: bold;
-    }
-    .navbar-brand {
-        color: var(--hover-text-color) !important;
-    }
-    .nav-link:hover {
-        color: var(--muted-gray);
-    }
     .navbar-nav .nav-link.active {
         transform: scale(1.1);
         color: var(--text-color-headings) !important;
-        font-weight: bold; /* Makes it stand out */
-        border-bottom: 2px solid var(--text-color-headings); /* Optional underline effect */
+        font-weight: bold;
+        border-bottom: 2px solid var(--text-color-headings);
     }
 }
 
+.navbar.scrolled .nav-link {
+    color: var(--hover-text-color) !important;
+    font-weight: bold;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: var(--hover-text-color) !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: var(--muted-gray);
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+/* Active Link Effect */
+.navbar-nav .nav-link.active {
+    transform: scale(1.1);
+    color: var(--green) !important;
+    font-weight: bold;
+    border-bottom: 2px solid var(--green);
+}
+
+/* General Nav Link */
 .nav-link {
     color: #2c3e50;
     transition: transform 0.3s ease;
     font-family: "Poppins", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
+    text-decoration: none;
 }
 
 .nav-link:hover {
@@ -73,6 +91,7 @@ body::before {
     color: var(--green);
 }
 
+/* Brand Logo */
 .navbar-brand {
     color: var(--text-color-headings) !important;
     transition: all 0.3s ease;
@@ -85,16 +104,67 @@ body::before {
     transform: scale(1.1);
 }
 
-.navbar-nav .nav-link.active {
-    transform: scale(1.1);
-    color: var(--green) !important; /* Change to your preferred active color */
-    font-weight: bold; /* Makes it stand out */
-    border-bottom: 2px solid var(--green); /* Optional underline effect */
-}
-
+/* Focus State */
 .nav-link:focus {
     color: var(--muted-gray);
     outline: none;
+}
+
+/* Dropdown Menu Styling */
+.nav-item {
+    position: relative;
+}
+
+/* Hide dropdown initially */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--soft-white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color-headings);
+    display: block;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Hover effect in dropdown */
+.dropdown-content a:hover {
+    background-color: var(--green);
+    color: white;
+    border-radius: 3px;
+}
+
+/* When dropdown is active */
+.nav-item.show .dropdown-content {
+    display: block;
+}
+
+/* Smooth dropdown transition */
+.dropdown-content {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.nav-item.show .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown active link */
+.dropdown-content a.active {
+    background-color: var(--green);
+    color: white;
 }
 /* Navbar Ends */
 
@@ -224,7 +294,7 @@ body::before {
     max-width: 100%;
     display: flex;
     flex-direction: column; /* Stack children vertically */
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
     background-color: var(--muted-gray);
 }
@@ -344,10 +414,10 @@ body::before {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 70px;
+    padding-top: 40px;
     padding-bottom: 90px;
-    overflow: hidden;
     width: 90%;
+    overflow: hidden;
 }
 
 @media (min-width: 1400px) {
@@ -479,7 +549,7 @@ body::before {
     max-width: 100%;
     display: flex;
     flex-direction: column; /* Stack children vertically */
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
     background-color: var(--muted-gray);
 }
@@ -586,7 +656,7 @@ body::before {
     max-width: 100%;
     display: flex;
     flex-direction: column; /* Stack children vertically */
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
 }
 
@@ -609,7 +679,6 @@ body::before {
 }
 
 .contacts h1 {
-    padding-top: 20px;
     padding-bottom: 10px;
     margin-bottom: 50px;
     font-weight: bold;
