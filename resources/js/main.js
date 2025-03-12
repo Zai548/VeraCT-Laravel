@@ -86,10 +86,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute("href"));
-        window.scrollTo({
-            top: target.offsetTop - 80, // This is the offset (100px from top)
-            behavior: "smooth",
-        });
+        const targetId = this.getAttribute("href").substring(1); // Remove '#'
+        const target = document.getElementById(targetId);
+
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 80, // Adjust offset
+                behavior: "smooth",
+            });
+        }
     });
 });

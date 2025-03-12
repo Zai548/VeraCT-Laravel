@@ -26,7 +26,7 @@
         <!-- Navbar & Hero -->
         <nav class="navbar navbar-expand-lg p-2 sticky-top">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold text-light p-3" href="#">VeraCT System</a>
+                <a class="navbar-brand fw-bold text-light p-3" href="#home">VeraCT System</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -41,12 +41,12 @@
                                 onclick="toggleDropdown(event)">Features</a>
                             <div class="dropdown-content">
                                 <a href="{{ route('accounting') }}">Accounting Management</a>
-                                <a href="#hr">Human Resources</a>
-                                <a href="#inventory">Inventory Management</a>
-                                <a href="#cservice">Customer Management</a>
-                                <a href="#pos">Task Management</a>
-                                <a href="#erp">Project Management</a>
-                                <a href="#payroll">Payroll Management</a>
+                                <a href="{{ route('hr') }}">Human Resources</a>
+                                <a href="{{ route('inventory') }}">Inventory Management</a>
+                                <a href="{{ route('customer') }}">Customer Management</a>
+                                <a href="{{ route('task') }}">Task Management</a>
+                                <a href="{{ route('project') }}">Project Management</a>
+                                <a href="{{ route('payroll') }}">Payroll Management</a>
                             </div>
                         </div>
 
@@ -95,7 +95,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style wow fadeInUp" data-link="#hr">
+                    <div class="features-style wow fadeInUp" data-link="{{ route('hr') }}">
                         <div class="image-wrapper-style ">
                             <img src="{{ asset('images/resume-folder-bro.png') }}" alt="" />
                         </div>
@@ -108,7 +108,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style wow fadeInUp" data-link="#inventory">
+                    <div class="features-style wow fadeInUp" data-link="{{ route('inventory') }}">
                         <div class="image-wrapper-style ">
                             <img src="{{ asset('images/checking-boxes-rafiki.png') }}" alt="" />
                         </div>
@@ -122,7 +122,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style wow fadeInUp " data-link="#cservice">
+                    <div class="features-style wow fadeInUp " data-link="{{ route('customer') }}">
                         <div class="image-wrapper-style ">
                             <img src="{{ asset('images/customer-relationship management-bro.png') }}" alt="" />
                         </div>
@@ -135,7 +135,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style wow fadeInUp " data-link="#pos">
+                    <div class="features-style wow fadeInUp " data-link="{{ route('task') }}">
                         <div class="image-wrapper-style ">
                             <img src="{{ asset('images/Task-bro.png') }}" alt="" />
                         </div>
@@ -148,7 +148,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style wow fadeInUp " data-link="#erp">
+                    <div class="features-style wow fadeInUp " data-link="{{ route('project') }}">
                         <div class="image-wrapper-style ">
                             <img src="{{ asset('images/business-plan-bro.png') }}" alt="" />
                         </div>
@@ -161,7 +161,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features-style wow fadeInUp " data-link="#erp">
+                    <div class="features-style wow fadeInUp " data-link="{{ route('payroll') }}">
                         <div class="image-wrapper-style ">
                             <img src="{{ asset('images/Profiling-bro.png') }}" alt="" />
                         </div>
@@ -334,13 +334,24 @@
                 <div class="contacts-wrapper">
                     <div class="contacts-style">
                         <h4>Our office</h4>
-                        <p><img src="{{ asset('images/icons8-phone-50.png') }}" alt=""> (02)-8721-8960</p>
-                        <p><img src="{{ asset('images/icons8-mobile-phone-48.png') }}" alt="">
-                            +63917-1230-684
-                        </p>
-                        <p>Unit B1, Block 2, Citiplaza 1 Commercial Complex, Tandang Sora
-                            Avenue Corner Visayas Avenue Extension, Barangay Pasong Tamo, Quezon
-                            City</p>
+                        <div class="contacts-box">
+                            <img src="{{ asset('images/icons8-phone-50.png') }}" alt="">
+                            <p> (02)-8721-8960</p>
+                        </div>
+                        <div class="contacts-box">
+                            <img src="{{ asset('images/icons8-mobile-phone-48.png') }}" alt="">
+                            <p> +63917-1230-684</p>
+                        </div>
+                        <div class="contacts-box">
+                            <img src="{{ asset('images/icons8-location-64.png') }}" alt="">
+                            <p> Unit B1, Block 2,
+                                Citiplaza 1 Commercial Complex, Tandang Sora
+                                Avenue Corner Visayas Avenue Extension, Barangay Pasong Tamo, Quezon
+                                City</p>
+                        </div>
+
+
+
                     </div>
                     <div class="contacts-style">
                         <h4>Say Hello</h4>

@@ -41,12 +41,12 @@
                             <a class="nav-link dropdown-toggle" onclick="toggleDropdown(event)">Features</a>
                             <div class="dropdown-content">
                                 <a href="{{ route('accounting') }}">Accounting Management</a>
-                                <a href="#hr">Human Resources</a>
-                                <a href="#inventory">Inventory Management</a>
-                                <a href="#cservice">Customer Management</a>
-                                <a href="#pos">Task Management</a>
-                                <a href="#erp">Project Management</a>
-                                <a href="#payroll">Payroll Management</a>
+                                <a href="{{ route('hr') }}">Human Resources</a>
+                                <a href="{{ route('inventory') }}">Inventory Management</a>
+                                <a href="{{ route('customer') }}">Customer Management</a>
+                                <a href="{{ route('task') }}">Task Management</a>
+                                <a href="{{ route('project') }}">Project Management</a>
+                                <a href="{{ route('payroll') }}">Payroll Management</a>
                             </div>
                         </div>
                     </div>
@@ -74,10 +74,10 @@
                     <a class="side-nav-link active" href="#overview">Overview</a>
                 </div>
                 <div class="side-nav-wrapper">
-                    <a class="side-nav-link" href="#benefits">Benefits</a>
+                    <a class="side-nav-link" href="#key-features">Features</a>
                 </div>
                 <div class="side-nav-wrapper">
-                    <a class="side-nav-link" href="#key-features">Features</a>
+                    <a class="side-nav-link" href="#benefits">Benefits</a>
                 </div>
             </div>
             <div class="feature-content">
@@ -86,16 +86,16 @@
                     @yield('overview')
                 </div>
                 {{-- Overview Ends --}}
-                {{-- Benefits Starts --}}
-                <div class="section-div benefits" id="benefits">
-                    @yield('benefits')
-                </div>
-                {{-- Benefits Ends --}}
                 {{-- Key Features Starts --}}
                 <div class="section-div key-features" id="key-features">
                     @yield('key-features')
                 </div>
                 {{-- Key Features Ends --}}
+                {{-- Benefits Starts --}}
+                <div class="section-div benefits" id="benefits">
+                    @yield('benefits')
+                </div>
+                {{-- Benefits Ends --}}
             </div>
         </div>
 

@@ -9,6 +9,12 @@
     --hover-text-color: #fff;
 }
 
+html {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+    overflow-y: auto; /* Ensure this is NOT 'hidden' */
+}
+
 body {
     position: relative;
     background-color: var(--soft-white);
@@ -27,10 +33,20 @@ body::before {
     z-index: 2;
 }
 
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1400px) {
+    .container-fluid {
+        max-width: 1320px;
+    }
+}
+
 /* Navbar Starts */
 .navbar {
     transition: all 0.3s ease-in-out;
-    border-bottom: 2px solid #2c3e50;
 }
 
 /* Navbar toggler */
@@ -43,6 +59,7 @@ body::before {
 .navbar.scrolled {
     background-color: #6a9f6a;
     box-shadow: 0 2px 8px #2c3e50;
+    border-bottom: 2px solid var(--text-color-headings);
 
     .navbar-nav .nav-link.active {
         transform: scale(1.1);
@@ -82,7 +99,7 @@ body::before {
     color: #2c3e50;
     transition: transform 0.3s ease;
     font-family: "Poppins", sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     text-decoration: none;
 }
 
@@ -239,9 +256,10 @@ body::before {
     align-items: center; /* Center vertically */
     width: 100%;
     min-width: 300px;
-    height: 500px;
+    height: 600px;
     margin-bottom: 30px;
     flex: 1 1 (50% -10px);
+    margin-top: -100px;
 }
 
 .hero-right img {
@@ -260,6 +278,7 @@ body::before {
     height: 500px;
     margin-bottom: 30px;
     flex: 1 1 (50% -10px);
+    margin-top: -25px;
 }
 
 .hero-container h1 {
@@ -596,7 +615,7 @@ body::before {
     align-items: center; /* Center content horizontally */
     height: auto; /* Remove fixed height for better responsiveness */
     width: 100%;
-    flex: 1 1 calc(20% - 10px);
+    flex: 1 1 calc(25% - 10px);
     transition: all 0.3s ease;
     background-color: var(--soft-white);
     box-shadow: 0 3px 5px#2c3e50;
@@ -695,6 +714,11 @@ body::before {
     gap: 20px;
 }
 
+.contacts-box {
+    display: flex;
+    flex-direction: row;
+}
+
 .contacts-style {
     display: flex;
     flex-direction: column;
@@ -724,10 +748,6 @@ body::before {
 .contacts-style img {
     width: 25px;
     height: 25px;
-}
-
-.contacts-box:hover {
-    background-color: #1e5b6e;
 }
 
 .contacts-image-wrapper {

@@ -1,7 +1,7 @@
 @extends('layouts.features')
 
 @section('title')
-    <title>Accounting</title>
+    <title>Accounting Management</title>
 @endsection
 
 @section('hero-left')
@@ -57,7 +57,7 @@
 
 @section('key-features')
     <h2>Key Features</h2>
-    <h3> 1. Income and Expense Tracking</h3>
+    <h3>1. Income and Expense Tracking</h3>
     <p>Track all incoming revenue and outgoing expenses in real-time. VeraCT allows businesses to categorize their income
         and expenses, ensuring accurate financial monitoring and clear visibility into cash flow.</p>
     <h3>2. Invoice Management</h3>

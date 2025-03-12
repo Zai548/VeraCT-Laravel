@@ -11,7 +11,7 @@
 
 body {
     position: relative;
-    background-color: var(--soft-white);
+    background-color: var(--muted-gray);
 }
 
 body::before {
@@ -25,6 +25,17 @@ body::before {
 .content {
     position: relative;
     z-index: 2;
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1400px) {
+    .container-fluid {
+        max-width: 1320px;
+    }
 }
 
 /* Navbar Starts */
@@ -233,7 +244,6 @@ body::before {
     align-items: flex-end; /* Center vertically */
     width: 100%;
     min-width: 300px;
-    height: 550px;
     margin-bottom: 30px;
 }
 
@@ -255,8 +265,6 @@ body::before {
     flex-direction: column;
     width: 100%;
     min-width: 300px;
-    height: 500px;
-    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -275,7 +283,8 @@ body::before {
         height: 580px !important;
     }
     .hero-right {
-        margin-top: -580px; /* This overlaps the first flexbox */
+        margin-top: -550px;
+        height: 550px;
     }
     .hero-right img {
         height: 650px;
@@ -380,6 +389,7 @@ body::before {
     flex-direction: column;
     flex-basis: 80%;
     flex-grow: 1;
+    margin-left: 20px;
 }
 
 .feature-content h2 {
@@ -406,9 +416,13 @@ body::before {
 }
 
 .section-div {
-    border-bottom: 2px solid var(--text-color-headings);
+    padding-bottom: 50px;
     margin-bottom: 50px;
     scroll-margin-top: 100px; /* This is the offset from the top */
+    background-color: var(--soft-white);
+    box-shadow: 0 3px 8px var(--text-color-headings);
+    padding: 50px;
+    border-radius: 1.5rem;
 }
 
 /* Contacts Starts */
