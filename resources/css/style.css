@@ -46,7 +46,7 @@ body::before {
 
 /* Navbar Starts */
 .navbar {
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Navbar toggler */
@@ -67,19 +67,24 @@ body::before {
         font-weight: bold;
         border-bottom: 2px solid var(--text-color-headings);
     }
-}
 
-.navbar.scrolled .nav-link {
-    color: var(--hover-text-color) !important;
-    font-weight: bold;
-}
+    .nav-link {
+        color: var(--hover-text-color) !important;
+        font-weight: bold;
+    }
 
-.navbar.scrolled .navbar-brand {
-    color: var(--hover-text-color) !important;
-}
+    .navbar-brand {
+        color: var(--hover-text-color) !important;
+    }
 
-.navbar.scrolled .nav-link:hover {
-    color: var(--muted-gray);
+    .nav-link:hover {
+        color: var(--text-color-headings) !important;
+    }
+
+    .nav-link:focus {
+        color: var(--text-color-headings) !important;
+        outline: none;
+    }
 }
 
 .navbar-nav {
@@ -123,7 +128,7 @@ body::before {
 
 /* Focus State */
 .nav-link:focus {
-    color: var(--muted-gray);
+    color: var(--green);
     outline: none;
 }
 

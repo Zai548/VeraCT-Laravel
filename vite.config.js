@@ -8,8 +8,10 @@ export default defineConfig({
             input: [
                 "resources/css/style.css",
                 "resources/css/animate.css",
-                "resources/js/wow.min.css",
+                "resources/css/featuresStyle.css",
+                "resources/js/wow.min.js",
                 "resources/js/main.js",
+                "resources/js/features.js",
             ],
             refresh: true,
         }),
